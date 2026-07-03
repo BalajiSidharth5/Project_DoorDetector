@@ -1,6 +1,6 @@
 ## Project_DoorDetector
 # DOOR STATE DETECTOR
-This project detects whether a door is open or closed using infrared reflection. It runs on two Adafruit HUZZAH32 boards and skips contact switches entirely.
+This project detects whether a door is open or closed using infrared reflection. It runs on two Adafruit HUZZAH32 boards.
 
 # HOW IT WORKS
 One HUZZAH32 sits at the door and reads the WWZMDiB 3 wire IR sensor. The sensor reflects IR off the door surface. When the door sits in front of the sensor, IR bounces back and the output reads one state. When the door swings open, the surface moves out of range and the output flips. A trim pot on the sensor sets the trigger distance.
@@ -18,7 +18,7 @@ The second HUZZAH32 acts as the receiver. It gets the door state and lights an L
 
 # FIRMWARE
 Button input is debounced in firmware on both boards.
-Both boards run deep sleep to cut power draw. Each board wakes from deep sleep when you press its tactile button. The status LED on each board turns on when that board is awake and off when it drops back into deep sleep. This keeps both boards off most of the time and only pulls full current during an active read or transmission.
+Both boards run deep sleep to cut power draw. Each board wakes from deep sleep when you press its tactile button. The status LED on each board turns on when that board is awake and off when it drops back into deep sleep. This keeps both boards off when user does not need it.
 
 # POWER
 The device runs on rechargeable AA cells instead of a lithium ion pack. Power and ground connect directly to the microcontroller with no charge circuit on board. Charging happens outside the device, in a standalone AA charger.
