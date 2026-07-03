@@ -18,7 +18,7 @@ The second HUZZAH32 acts as the receiver. It gets the door state and lights an L
 
 # FIRMWARE
 Button input is debounced in firmware on both boards.
-Both boards run deep sleep to cut power draw. Each board wakes from deep sleep when you press its tactile button. The status LED on each board turns on when that board is awake and off when it drops back into deep sleep. This keeps both boards off when user does not need it.
+Both boards run deep sleep to cut power draw. Each board wakes from deep sleep when you press its tactile button. The status LED on each board turns on when that board is awake and off when it drops back into deep sleep. This keeps both boards off when user does not need it. Utilized ESPnow library to communicate data between microcontrollers.
 
 # POWER
 The device runs on rechargeable AA cells instead of a lithium ion pack. Power and ground connect directly to the microcontroller with no charge circuit on board. Charging happens outside the device, in a standalone AA charger.
